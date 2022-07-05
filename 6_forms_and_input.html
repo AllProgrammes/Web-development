@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <h3><u> Welcome to HCS Project Submission website</u></h3>
+    <form action="hcs_project_portal.php">
+        <div>
+            Name : <input type="text" name="myname">
+        </div>
+        <br>
+        <div>
+            Class : <input type="number" name="myclass">
+        </div>
+        <br>
+        <div>
+            Roll No : <input type="number" name="myrollno">
+        </div>
+        <br>
+        <div>
+            Registration ID : <input type="number" name="myregistrationnumber">
+        </div>
+        <br>
+        <div>
+            Date of Submission : <input type="date" name="mydatetime">
+        </div>
+        <br>
+        <div>
+            <label for="stream">Choose your Stream :</label>
+            <select name="mystream" id="stream">
+                <option value="comm" selected>Commerce</option>
+                <option value="scie">Science</option>
+                <option value="arts">Arts</option>
+            </select>
+
+        </div><br>
+        <div>Additional Note (if any) : <br> <textarea name="myadditionalnote" cols="50" rows="2"></textarea></div>
+        <br>
+        <strong>Note : Tick the boxes correctly (If any of the claim is incorrect then strict action will be
+            taken)</strong>
+        <div>
+            <input type="checkbox" name="not_from_interet" id="not_from_interet" checked>
+            <label for="not_from_interet">I have not copied my whole project from internet or someone else</label>
+            <br>
+            <input type="checkbox" name="own_creativity" id="own_creativity" checked>
+            <label for="own_creativity">I completed this project all by myself </label><br>
+            <input type="checkbox" name="proper_credits" id="proper_credits" checked>
+            <label for="proper_credits">I have given proper credits to all the sources from where I took help while
+                completing my project</label>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Submit Now">
+            <input type="reset" value="Reset Now">
+        </div>
+    </form>
+</body>
+
+</html>
