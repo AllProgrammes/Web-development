@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* Element Selector */
+        p {
+            color: red;
+        }
+
+        /* ID selector */
+        #blue_font {
+            color: blue;
+        }
+
+        /* Class selector */
+        .blue_font {
+            color: blue;
+        }
+
+        .yellow_bg {
+            background-color: yellow;
+        }
+
+        .black_font {
+            color: black;
+        }
+
+        /* Grouping selector */
+        header,
+        footer {
+            border: 2px solid red;
+            background-color: aqua;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>CSS Selectors</header>
+    <p>This is a small paragraph to demonstrate the working of CSS Selectors</p>
+    <p id="blue_font">This should be in blue_font as it is using blue_font ID</p>
+    <p class="yellow_bg black_font">This should be in yellow bg and black font as it is using both classes</p>
+    <span class="blue_font yellow_bg">This is a span and it will be in blue font and with yellow background</span>
+    <footer>This is a footer</footer>
+</body>
+
+</html>
