@@ -1,0 +1,17 @@
+h3 {
+    color: rgb(255, 71, 200);
+    background-color: black;
+    text-align: center;
+}
+
+p {
+    color: tomato;
+    text-align: left;
+}
+
+span {
+    color: darkgoldenrod;
+    font-size: medium;
+    /* text-align: right; #This dont work with span*/
+    float: right;
+}
