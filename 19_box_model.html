@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+        }
+
+        .container {
+            background-color: #6e1f1f;
+            color: rgb(255, 255, 255);
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            border: 3px solid #ff0000;
+            border-radius: 30px;
+            width: 400px;
+            /* We can set padding/margin like in one line also */
+            /* padding-top: 13px;
+            padding-right: 80px;
+            padding-bottom: 10px;
+            padding-left: 80px; */
+
+            /* padding: TOP RIGHT BOTTOM LEFT; */
+            /* margin: TOP RIGHT BOTTOM LEFT; */
+            padding: 13px 40px 10px 40px;
+            /* Easy to remember code : TRBL */
+            margin: 20px 40px 10px 40px;
+
+            /* If we want the width to not change with the change in padding then we can use this  */
+            box-sizing: border-box;
+        }
+
+        .para {
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3><u>DEATH</u></h3><br>
+        <p id="first" class="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo neque error, ullam
+            nisi suscipit
+            expedita molestiae sequi a accusamus odio, incidunt fuga ad. Recusandae minus minima, repellat id sint,
+            quaerat cum illo placeat, quia dignissimos blanditiis autem eveniet dolorum doloribus perspiciatis impedit
+            aut. Culpa, commodi.</p>
+    </div>
+    <div class="container">
+        <h3><u>NOTE</u></h3><br>
+        <p id="second" class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio blanditiis culpa,
+            aspernatur,
+            fugit veritatis illum sed obcaecati pariatur unde sapiente aliquam quas voluptatum earum. Mollitia dicta
+            delectus, adipisci temporibus laborum ea esse necessitatibus itaque error dolor officia impedit eligendi
+            enim harum non alias dolorum distinctio.</p>
+    </div>
+</body>
+
+</html>
