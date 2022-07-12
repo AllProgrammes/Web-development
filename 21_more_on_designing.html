@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selectors and Desigining</title>
+    <style>
+        .container {
+            border: 5px solid rgb(108, 42, 42);
+            margin: auto;
+            padding: 15px;
+            border-radius: 23px;
+            background-color: rgba(155, 98, 98, 0.546);
+            text-align: center;
+            width: 500px;
+        }
+
+        p {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-style: italic;
+        }
+
+        h3 {
+            font-family: 'Courier New', Courier, monospace;
+            text-decoration: underline;
+            font-size: larger;
+        }
+
+        a {
+            text-decoration: none;
+            font-style: italic;
+            color: black;
+            font-size: small;
+            padding-bottom: 2px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-radius: 5px;
+            border: 3px dotted rgba(71, 43, 156, 0.354);
+            background-color: rgba(156, 43, 43, 0.539);
+        }
+
+        /* If someone hovers over in the link button then the element will act as follows */
+        a:hover {
+            color: aqua;
+            background-color: brown;
+        }
+
+        /* If someone click on that link button then the element will act as follows */
+        a:active {
+            background-color: rgb(248, 8, 8);
+        }
+
+        /* If you successfully visit the page links to that element then the element will act as follows */
+        a:visited {
+            background-color: rgba(228, 35, 35, 0.075);
+        }
+
+        button {
+            cursor: pointer;
+            text-decoration: none;
+            font-style: italic;
+            color: black;
+            font-size: small;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-bottom: 3px;
+            border-radius: 5px;
+            border: 2px dotted rgba(156, 43, 43, 0.354);
+            background-color: rgba(156, 43, 43, 0.539);
+        }
+
+        button:hover {
+            color: aqua;
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>This is me learning more CSS</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem praesentium quae molestiae
+            temporibus ad voluptatibus harum, perspiciatis reprehenderit, eaque maxime quaerat. Rem voluptas voluptatem
+            provident, cupiditate a, accusamus aut ducimus facere vitae et incidunt?</p>
+        <!-- target _blank is to open link in a new tab -->
+        <a href="https://google.com" target="_blank">More Here</a>
+        <button>Telegram Here</button>
+    </div>
+</body>
+
+</html>
