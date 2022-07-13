@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Page</title>
+    <style>
+        .navbar {
+            background-color: black;
+            border-radius: 9px;
+        }
+
+        .navbar ul {
+            overflow: auto;
+        }
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            margin: 3px 10px;
+            padding: 10px;
+        }
+
+        .navbar li a {
+            text-decoration: underline whitesmoke;
+            color: white;
+            /* padding: y x; */
+            padding: 3px 7px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a:hover {
+            color: rgb(0, 0, 0);
+            background-color: rgba(245, 245, 245, 0.495);
+        }
+
+        .search {
+            margin: 12px 40px;
+            border: 2px solid black;
+            float: right;
+            color: black;
+            padding: 3px 7px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 25%;
+            border-radius: 9px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="https://google.com">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <div><input type="text" class="search" placeholder="Search for anything here"></div>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
