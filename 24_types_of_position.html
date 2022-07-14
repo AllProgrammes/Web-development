@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of positions</title>
+    <style>
+        /* CSS positions are static(default),relative,absolute,fixed,sticky */
+        .parent {
+            margin: 0px;
+            border: 2px solid black;
+            background-color: khaki;
+        }
+
+        .box {
+            display: inline-block;
+            border: 2px solid red;
+            width: 300px;
+            height: 150px;
+            text-align: justify;
+            box-sizing: border-box;
+            padding: 13px;
+        }
+
+        #box3 {
+            /* position: relative means --> relative to its normal position --> leaves a gap at its normal position*/
+            /* position: relative; */
+
+            /* position: absolute means --> relative to the parent position --> leaves a gap at its parent position*/
+            /* top: 34px;
+            left: 34px; */
+
+            /* position: sticky means --> make the element stick at the top of the page while scrolling the webppage */
+            position: sticky;
+            top: 1px;
+
+        }
+
+        #box4 {
+            /* position: sticky means --> make the element fixed at the any where on the page while scrolling the webppage */
+            position: fixed;
+            bottom: 1px;
+            right: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="box" id="box1">
+            <h3>Heading 1</h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam accusamus nostrum a iure
+            sapiente. Et!
+        </div>
+        <div class="box" id="box2">
+            <h3>Heading 2</h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam accusamus nostrum a iure
+            sapiente. Et!
+        </div>
+        <div class="box" id="box3">
+            <h3>Heading 3</h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam accusamus nostrum a iure
+            sapiente. Et!
+        </div>
+        <div class="box" id="box4">
+            <h3>Heading 4</h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam accusamus nostrum a iure
+            sapiente. Et!
+        </div>
+    </div>
+</body>
+
+</html>
