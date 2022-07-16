@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nanum+Gothic&family=Roboto+Condensed:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto+Condensed:wght@300&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0%;
+        }
+
+        .navbar {
+            background-color: black;
+            height: 80px;
+        }
+
+        header {
+            position: sticky;
+            top: 0px;
+        }
+
+        .navbar ul {
+            overflow: auto;
+            margin: 0px;
+        }
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            margin: 28px 23px 0px 20px;
+        }
+
+        .navbar li a {
+            text-decoration: underline whitesmoke;
+            color: white;
+            /* padding: y x; */
+            padding: 3px 7px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a:hover {
+            color: rgb(0, 0, 0);
+            background-color: rgba(245, 245, 245, 0.495);
+        }
+
+        .menu {
+            position: fixed;
+            right: 10px;
+            background-color: black;
+            top: 29px;
+            width: 23px;
+            height: 20px;
+        }
+
+        .search {
+            margin: 26px 49px;
+            border: 2px solid black;
+            float: right;
+            color: black;
+            padding: 3px 7px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 20%;
+            border-radius: 6px;
+        }
+
+        .poster img {
+            max-width: 100%;
+            height: auto;
+            padding-bottom: 5px;
+        }
+
+        .logo {
+            width: 45px;
+            height: 56px;
+            padding: 8px 15px 0px 0px;
+            float: left;
+        }
+
+        .bar1 {
+            display: inline-block;
+            width: 43.5%;
+            height: 3px;
+            padding: 7px 0px 4px 0px;
+        }
+
+        .bar2 {
+            display: inline-block;
+            width: 43.5%;
+            height: 3px;
+            padding: 7px 0px 4px 0px;
+        }
+
+        .bar_text {
+            font-family: 'Montserrat', sans-serif;
+            display: inline;
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 2px;
+            margin-bottom: 2px;
+        }
+
+        .container {
+            border: 1px solid black;
+            display: inline-block;
+            width: 240px;
+            margin: 10px 5px 10px 10px;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .container_text {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            font-size: small;
+        }
+
+        .mrp {
+            text-decoration: line-through;
+            display: inline-block;
+        }
+
+        .discounted_price {
+            display: inline-block;
+        }
+
+        .extra {
+            background-color: black;
+            font-size: small;
+            color: white;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+
+        .extra ul {
+            display: inline-block;
+            box-sizing: border-box;
+            list-style: none;
+            padding: 10px 20px 30px 20px;
+            margin: 10px 45px;
+        }
+
+        .extra ul li {
+            padding: 3px;
+        }
+
+        .extra li a {
+            color: white;
+        }
+
+        .extra_head {
+            font-size: larger;
+            text-decoration: underline whitesmoke;
+            color: white;
+        }
+
+        .map {
+            float: right;
+            padding: 15px 35px;
+            margin: 0px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <img class="logo" src="https://telegra.ph/file/2e8eb0771e9d63b1ea079.png" alt="logo">
+                <li><a href="https://google.com">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <div><input type="text" class="search" placeholder="Search for anything here"><img class="menu"
+                        src="https://telegra.ph/file/de286fbc18362f6e17110.png" alt="">
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <div class="poster">
+        <img src="https://telegra.ph/file/f04b84df58df93c1b2faa.jpg" alt="Poster">
+    </div>
+    <div>
+        <img src="https://telegra.ph/file/bbd6915f9542af03b7ab1.png" alt="black bar" class="bar1">
+        <div class="bar_text"><strong> GYM EQUIPMENTS</strong></div>
+        <img src="https://telegra.ph/file/bbd6915f9542af03b7ab1.png" alt="black bar" class="bar2">
+    </div>
+    <div class="container container_text">
+        <img height="200px" src="https://telegra.ph/file/206d98c3f64a79afb0d5d.png" alt="steel dumbells">
+        <div class="discounted_price">Rs 800</div>
+        <div class="mrp">1999</div>
+    </div>
+    <div class="container container_text">
+        <img height="200px" src="https://telegra.ph/file/de30cd9e7d12fbb4972b6.png" alt="steel dumbells">
+        <div class="discounted_price">Rs 8000</div>
+        <div class="mrp">21000</div>
+    </div>
+    <div class="container container_text">
+        <img height="200px" width="200px" src="https://telegra.ph/file/a5645cde09b92b6a83438.png" alt="steel dumbells">
+        <div class="discounted_price">Rs 12300</div>
+        <div class="mrp">20000</div>
+    </div>
+    <div class="container container_text">
+        <img height="200px" src="https://telegra.ph/file/4e2a140f655e9b031d260.png" alt="steel dumbells">
+        <div class="discounted_price">Rs 300</div>
+        <div class="mrp">1800</div>
+    </div>
+    <div class="container container_text">
+        <img height="200px" width="230px" src="https://telegra.ph/file/d92249971db468ee19b43.png" alt="steel dumbells">
+        <div class="discounted_price">Rs 5000</div>
+        <div class="mrp">11000</div>
+    </div>
+    <div class="container container_text">
+        <img height="200px" src="https://telegra.ph/file/206d98c3f64a79afb0d5d.png" alt="steel dumbells">
+        <div class="discounted_price">Rs 800</div>
+        <div class="mrp">1999</div>
+    </div>
+    <div class="container container_text">
+        <img height="200px" src="https://telegra.ph/file/de30cd9e7d12fbb4972b6.png" alt="steel dumbells">
+        <div class="discounted_price">Rs 8000</div>
+        <div class="mrp">21000</div>
+    </div>
+    <div class="container container_text">
+        <img height="200px" width="200px" src="https://telegra.ph/file/a5645cde09b92b6a83438.png" alt="steel dumbells">
+        <div class="discounted_price">Rs 12300</div>
+        <div class="mrp">20000</div>
+    </div>
+    <div class="container container_text">
+        <img height="200px" src="https://telegra.ph/file/4e2a140f655e9b031d260.png" alt="steel dumbells">
+        <div class="discounted_price">Rs 300</div>
+        <div class="mrp">1800</div>
+    </div>
+    <div class="container container_text">
+        <img height="200px" width="230px" src="https://telegra.ph/file/d92249971db468ee19b43.png" alt="steel dumbells">
+        <div class="discounted_price">Rs 5000</div>
+        <div class="mrp">11000</div>
+    </div>
+    <div class="container container_text">
+        <img height="200px" src="https://telegra.ph/file/206d98c3f64a79afb0d5d.png" alt="steel dumbells">
+        <div class="discounted_price">Rs 800</div>
+        <div class="mrp">1999</div>
+    </div>
+    <div class="container container_text">
+        <img height="200px" src="https://telegra.ph/file/de30cd9e7d12fbb4972b6.png" alt="steel dumbells">
+        <div class="discounted_price">Rs 8000</div>
+        <div class="mrp">21000</div>
+    </div>
+    <div class="container container_text">
+        <img height="200px" width="200px" src="https://telegra.ph/file/a5645cde09b92b6a83438.png" alt="steel dumbells">
+        <div class="discounted_price">Rs 12300</div>
+        <div class="mrp">20000</div>
+    </div>
+    <div class="container container_text">
+        <img height="200px" src="https://telegra.ph/file/4e2a140f655e9b031d260.png" alt="steel dumbells">
+        <div class="discounted_price">Rs 300</div>
+        <div class="mrp">1800</div>
+    </div>
+    <div class="container container_text">
+        <img height="200px" width="230px" src="https://telegra.ph/file/d92249971db468ee19b43.png" alt="steel dumbells">
+        <div class="discounted_price">Rs 5000</div>
+        <div class="mrp">11000</div>
+    </div>
+    <footer class="extra">
+        <ul>
+            <li class="extra_head"><strong>About Us</strong></li>
+            <li></li>
+            <li></li>
+            <li><a href="#">About Gym</a> </li>
+            <li><a href="#">Online Membership</a> </li>
+            <li><a href="#">Owner's Message</a></li>
+        </ul>
+        <ul>
+            <li class="extra_head"><strong>Our Socials</strong></li>
+            <li></li>
+            <li></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Whatsapp</a></li>
+        </ul>
+        <ul>
+            <li class="extra_head"><strong>Our Shop</strong></li>
+            <li></li>
+            <li></li>
+            <li><a href="#">Whey Protein</a> </li>
+            <li><a href="#">Gym & Sport</a></li>
+            <li><a href="#">Booking Form</a></li>
+        </ul>
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.249311809677!2d86.01888090479991!3d23.667040654852247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f43df5a884decd%3A0x61693c82b22d089b!2sRoyal%20fitness%20club!5e0!3m2!1sen!2sin!4v1657957921548!5m2!1sen!2sin"
+                width="200" height="110" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
+</body>
+
+</html>
