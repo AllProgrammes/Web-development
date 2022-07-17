@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibilty And Z-Index</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid white;
+        }
+
+        #box1 {
+            background-color: black;
+        }
+
+        #box2 {
+            /* display: none; --> This will hide the element and the respective space taken by it */
+            /* visibility: hidden; -->> This will hide the element only but not the space taken by it */
+            background-color: red;
+        }
+
+        #box3 {
+            position: relative;
+            top: 60px;
+            z-index: 0;
+            /* z-index: --> This works only and only when elements have positions defined.
+            And at the time of overlaping the element which have higher z index value dominates on top of the element which have less index value */
+            background-color: orange;
+        }
+
+        #box4 {
+            position: relative;
+            top: 0px;
+            z-index: -1;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+</body>
+
+</html>
