@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox in CSS</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            height: 600px;
+
+            /* Initilizing the elements with flex */
+            display: flex;
+
+            /* Flex properties for flex container */
+            flex-direction: row;
+            /*flex-direction: column;
+            flex-direction: column-reverse;
+            flex-direction: row-reverse; 
+            Note --> defalut value of flex direction is row*/
+
+            /* This will allow the elements to be responsive i.e it will change its position according to the screen dimension */
+            flex-wrap: wrap;
+            /*flex-wrap: nowrap;
+            flex-wrap: wrap-reverse;
+            
+            Note --> default value of flex wrap is nowrap */
+            flex-wrap: row;
+
+            /* flex-flow: row wrap; */
+            /* flex-flow: --> it is a combined command which performs flex diection + flex wrap */
+
+
+            /* Justify Content Property :- */
+
+            /* 1. It gives equal gaps at both the sides  */
+            justify-content: center;
+
+            /* 2. It gives equal gaps between different elements excluding the page right and left margins*/
+            justify-content: space-between;
+
+            /* 3. It gives equal gaps at both the sides  */
+            justify-content: space-evenly;
+
+            /* 4. Shifts everything to the end of the border/flex */
+            justify-content: end;
+            justify-content: flex-end;
+
+            /* 5. Shifts everything to the start of the border/flex */
+            justify-content: start;
+            justify-content: flex-start;
+
+            /* 6. gives equal spacing between right + left + borders of the page */
+            /* Note -->in this rigth and left spaces between the elements are more than as compared to margins of the page */
+            justify-content: space-around;
+
+
+            align-items: center;
+            /*align elements at center of the flex*/
+
+            align-items: flex-end;
+            /*align elements at bottom of the flex*/
+
+            align-items: flex-start;
+            /*align elements at start of the flex*/
+
+            align-items: stretch;
+            /* fill at vertical spaces left if available */
+        }
+
+        .item {
+            /* max-width: max-content; */
+            /* if using this then the width of the element will change itself according to the content inside it */
+
+            border: 2px solid green;
+            margin: 3px;
+            width: 200px;
+            height: 200px;
+            padding: 15px;
+            background-color: tomato;
+        }
+
+        #item1 {
+
+            /* Order property  */
+            /* whichever element's order value will be more it will be shown at last in the flexbox */
+            order: 2;
+            flex-grow: 1;
+            /*This sets the element to expand when extra space is given */
+        }
+
+        #item3 {
+            /* higher the order later it shows up in the container */
+            order: 20;
+            flex-shrink: 3;
+            /*This sets the element to shrink when less space is available */
+            flex-basis: 120px;
+            /* Q. Is this width??
+            Ans : 
+                    when flex-direction: is set to row then flex-basis: acts as width of the element;
+                    when flex-direction: is set to column then flex-basis: acts as height of the element; */
+
+            /* But but but what if you dont want to write grow,shrink,basis in 3 different lines? yes I gotch you */
+            /* <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> */
+            flex: 1 3 120px
+        }
+
+        #item5 {
+            /* align-self: property; */
+            align-self: center;
+            /*places the element at center of the flex box*/
+            align-self: flex-end;
+            /*places the element at end of the flex box*/
+            align-self: flex-start;
+            /*places the element at start of the flex box*/
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is me learning flex box</h1>
+    <div class="container">
+        <div class="item" id="item1">First box <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus
+            inventore, a porro dolore ab, vero officia veritatis, incidunt eius doloremque aliquam velit at fugiat
+            reiciendis.</div>
+        <div class="item" id="item2">Second box <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Temporibus
+            inventore, a porro dolore ab, vero officia veritatis, incidunt eius doloremque aliquam velit at fugiat
+            reiciendis.</div>
+        <div class="item" id="item3">Third box <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus
+            inventore, a porro dolore ab, vero officia veritatis, incidunt eius doloremque aliquam velit at fugiat
+            reiciendis.</div>
+        <div class="item" id="item4">Fourth box <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Temporibus
+            inventore, a porro dolore ab, vero officia veritatis, incidunt eius doloremque aliquam velit at fugiat
+            reiciendis.</div>
+        <div class="item" id="item5">Fifth box <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus
+            inventore, a porro dolore ab, vero officia veritatis, incidunt eius doloremque aliquam velit at fugiat
+            reiciendis.</div>
+    </div>
+</body>
+
+</html>
