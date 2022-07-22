@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size Units</title>
+    <style>
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            margin: 0px;
+            background-color: black;
+        }
+
+        h3 {
+            text-align: center;
+            color: red;
+        }
+
+        .container {
+            font-size: 20px;
+            border: 5px solid white;
+            /* Q. but what if I want to make this boder  full page ?keep on increasing the width and heigth til we get full page border ?
+            Ans : nooooo we can use vh and vw for this as shown below */
+            height: 100vh;
+            /*vh and vw value works as percentage */
+        }
+
+        #head1 {
+            border: 1px solid wheat;
+
+            /* EM is the power of font size in respect to its parent class */
+            font-size: 2em;
+            /* like if we do 2em here then the font size is 2 x 20px = 40px (you can also verify using inspect element in your browser) */
+            padding: 2em;
+            /* so here what do you thing ? padding will be 40px?if you think this then sorry you are wrong my friend !! when we use em in padding then it takes font size as its parent element and thus here we get padding of 80px which is 40 x 2 */
+        }
+
+        #head2 {
+            border: 1px solid wheat;
+            font-size: 5rem;
+            /* Q. So whats this rem now? 
+            Ans : rem works with keeping me mind the html font set at line number 11 in this program ;
+            Ex : like if the font size of the html tag is 10px then using 5rem means the font size will be 5 x 10p  */
+        }
+
+        #head3 {
+            border: 1px solid wheat;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3 id="head1">This is my head1</h3>
+        <h3 id="head2">This is my head2</h3>
+        <h3 id="head3">This is my head3</h3>
+    </div>
+</body>
+
+</html>
