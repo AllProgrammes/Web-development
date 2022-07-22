@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attributes and nth child pseudo selectors</title>
+    <style>
+        .container {
+            /* display: block; */
+            margin: auto;
+            max-width: 400px;
+            color: white;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        input {
+            margin: 5px;
+            border: 2px solid gold;
+        }
+
+        /* but but but what if I want to select and do something something in any one of the input element ? I gotch u homie just see below*/
+        input[type="text"] {
+            background-color: purple;
+            color: white;
+        }
+
+        /* this will work only when their is a anchor tag with target set in it */
+
+        /* a[target="_self"] this is affect only that element which have targe set to self */
+        /* a[target="_blank"] this will affect only that element which have target set to blank */
+        a[target] {
+            font-size: 30px;
+            text-decoration: underline red;
+            color: aliceblue;
+            margin: 4px;
+        }
+
+        a:hover {
+            color: aqua;
+        }
+
+        /* This will affect the li elements in every ul as per defined in the nth-child(_condition_here_) 
+        Like if I do 
+                    li:nth-child(2) then It will affect every 2nd element of the UL 
+
+                    li:nth-child(2n+1) then It will affect every 2n+1[n starts from 0 in a loop till the number of li] element of the UL 
+
+                    li:nth-child(even) then it will affect every even element of the list
+
+                    li:nth-child(odd) then it will affect every odd element of the list */
+        li:nth-child(2n+1) {
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="https://google.com" target="_blank">I will take you to google</a><br><br><br>
+        <form action="" class="form_control">
+            <div>
+                Name : <input type="text" placeholder="Enter your name"></div>
+            <div>Password : <input type="password" placeholder="Enter your password"></div>
+            <div>Age : <input type="age" placeholder="Enter your age"></div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+
+        <ul>
+            <li id="item1">item1</li>
+            <li id="item2">item2</li>
+            <li id="item3">item3</li>
+            <li id="item4">item4</li>
+            <li id="item5">item5</li>
+        </ul>
+        <ul>
+            <li id="item1">item1</li>
+            <li id="item2">item2</li>
+            <li id="item3">item3</li>
+            <li id="item4">item4</li>
+            <li id="item5">item5</li>
+        </ul>
+    </div>
+</body>
+
+</html>
