@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on selectors</title>
+    <style>
+        h2 {
+            color: red;
+            background-color: black;
+            text-align: center;
+            text-decoration: underline white dotted;
+        }
+
+        /* if we do like this  */
+        div p {
+            color: blue;
+            /* then whichever element is fulfills the condition of div and p it affects that element */
+        }
+
+        /* but if we want to affect specificaly only that element we want to then we can do like this */
+        div>p {
+            color: yellow;
+            background-color: green;
+            /* in this case only the element whose parent is div and is a paragraph is affected  */
+        }
+
+        div+p {
+            color: aqua;
+            background-color: black;
+            /* in this case only that element wil be affected whose previous element is a div */
+        }
+    </style>
+</head>
+
+<body>
+    <h2>This is me learnig more on selectors</h2>
+    <div class="container">
+        <div class="item">
+            <ul>
+                <li>I am div > ul > li</li>
+                <p>I am div > ul > p</p>
+            </ul>
+            <p>I am div > div > p</p>
+        </div>
+        <p>I am div > p</p>
+    </div>
+    <p>I am direct p</p>
+</body>
+
+</html>
