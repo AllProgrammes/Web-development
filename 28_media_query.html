@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        .boxes {
+            display: none;
+            color: red;
+            background-color: black;
+            text-align: center;
+            border: 2px solid green;
+            font-size: 40px;
+        }
+
+        /* If the width of the screen is in range from 0 to 400px then do as per mentioned */
+        @media only screen and (max-width:400px) {
+            #box1 {
+                display: block;
+                color: red;
+                background-color: black;
+            }
+        }
+
+        /* If the width of the screen ranges from 400px t0 820px then do as mentioned */
+        @media only screen and (min-width:400px) and (max-width:820px) {
+            #box2 {
+                display: block;
+                color: red;
+                background-color: black;
+            }
+        }
+
+        /* If the width of the screen ranges from 820px t0 1000px then do as mentioned */
+        @media only screen and (min-width:820px) and (max-width:1000px) {
+            #box3 {
+                display: block;
+                color: red;
+                background-color: black;
+            }
+        }
+
+        /* If the width of the screen ranges from 1000px t0 more than 1000px then do as mentioned */
+        @media only screen and (min-width:1000px) {
+            #box4 {
+                display: block;
+                color: red;
+                background-color: black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes" id="box1">I am Box 1 For mobile</div>
+    <div class="boxes" id="box2">I am Box 2 For tablet</div>
+    <div class="boxes" id="box3">I am Box 3 For laptops/pc</div>
+    <div class="boxes" id="box4">I am Box 4 For wide screen moniters</div>
+</body>
+
+</html>
