@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and after pseudo selectors</title>
+</head>
+<style>
+    body {
+        background-color: black;
+        color: white;
+        margin: 0px;
+
+    }
+
+    .menu {
+        display: flex;
+        margin: 0px;
+    }
+
+    li {
+        /* border: 1px solid gold; */
+        padding: 5px;
+        margin: 23px 23px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: underline whitesmoke;
+        list-style: none;
+    }
+
+    h3 {
+        font-size: 3rem;
+    }
+
+    section {
+        border: 2px solid red;
+        text-align: center;
+        display: flex;
+        height: 400px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* but what if we want to put something before the heading aka h3 then ? at that time we can use before pseudo selector as shown as below */
+    section::before {
+        content: "Hello Peter !!";
+    }
+
+    /* similarly if we want to write something after that elemnt hen we can use after pseudo selector */
+    section::after {
+        content: "Hello Donkey !!";
+    }
+</style>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="menu">
+                <li>Home</li>
+                <li>Services</li>
+                <li>Warrenty</li>
+                <li>Contact Us</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h3>Welcome to Coding World ^_^</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore laudantium nobis, perspiciatis ullam
+            ipsa odit suscipit unde mollitia ex? Ea quaerat doloribus id.</p>
+    </section>
+</body>
+
+</html>
