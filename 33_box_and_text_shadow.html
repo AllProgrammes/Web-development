@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow and Text Shadow</title>
+    <style>
+        body {
+            margin: 3px;
+            background-color: black;
+            color: white;
+            font-family: monospace;
+        }
+
+        .container {
+            display: flex;
+            padding: 5px;
+        }
+
+        .card {
+            border: 2px solid red;
+            border-radius: 13px;
+            padding: 3px;
+            margin: 13px;
+            text-align: center;
+
+            /* 
+            box-shadow has 4 attributes --> [extension on x axis] , [extension on y axis] , [blur radius values where 0 is default value (it can go to negative too adn in that case it will show shadow upwards i.e top and left of the box)] , [colour of the shadow] , [spread shadow (it spreads the shodow to all over the box)]; */
+
+            /* box-shadow: offset-x offset-y blur-radius spread-radius ; */
+            box-shadow: 6px 6px 5px 3px rgb(112, 108, 108);
+
+
+            /* inset is used when you want to give ur box shadow inside the box */
+            box-shadow: inset 6px 6px 5px 3px rgb(112, 108, 108);
+
+            /* You can give mutiple shadows in your box just give a comma and keep on addding another set of box shadow attributes , Show Below*/
+            box-shadow: 6px 6px 5px 3px rgb(112, 108, 108), 6px 6px 5px 3px green;
+        }
+
+        h3 {
+            text-decoration: underline;
+            font-size: 2rem;
+            text-shadow: -2px -5px 5px rgb(255, 6, 6);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card" id="card1">
+            <h3>Card1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum vel quos voluptatum libero, excepturi
+                illum, at saepe beatae placeat id consequatur non magnam cum?</p>
+        </div>
+        <div class="card" id="card2">
+            <h3>Card2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum vel quos voluptatum libero, excepturi
+                illum, at saepe beatae placeat id consequatur non magnam cum?</p>
+        </div>
+        <div class="card" id="card3">
+            <h3>Card3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum vel quos voluptatum libero, excepturi
+                illum, at saepe beatae placeat id consequatur non magnam cum?</p>
+        </div>
+    </div>
+</body>
+
+</html>
