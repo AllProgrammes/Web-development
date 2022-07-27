@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Animations</title>
+</head>
+<style>
+    body {
+        color: white;
+        background-color: black;
+        margin: 0px;
+    }
+
+    .top_menu {
+        display: flex;
+        border: 1px solid red;
+        margin: 0px;
+        background-color: black;
+        animation-name: top_menu;
+        animation-duration: 5s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+        animation-direction: reverse;
+    }
+
+    @keyframes top_menu {
+        from {
+            height: 100vh;
+            background-color: white;
+        }
+
+        to {
+            height: 10vh;
+        }
+    }
+
+    /* We can also do like this */
+    @keyframes top_menu {
+        0% {
+            position: relative;
+            width: 100%;
+        }
+
+        25% {
+            position: relative;
+            width: 50%;
+        }
+
+        50% {
+            position: relative;
+            width: 25%;
+        }
+
+        75% {
+            position: relative;
+            width: 10%;
+        }
+    }
+
+    .top_menu_buttons {
+        list-style: none;
+        font-family: monospace;
+        margin: 30px 23px;
+        font-size: large;
+        height: fit-content;
+        border: 1px solid red;
+        text-decoration: underline whitesmoke;
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <ul class="top_menu">
+                <li class="top_menu_buttons" id="button1">Button 1</li>
+                <li class="top_menu_buttons" id="button2">Button 2</li>
+                <li class="top_menu_buttons" id="button3">Button 3</li>
+                <li class="top_menu_buttons" id="button4">Button 4</li>
+            </ul>
+        </nav>
+    </header>
+
+</body>
+
+</html>
