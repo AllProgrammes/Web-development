@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSSS variables and Custom Properties</title>
+    <style>
+        /* So why to use that variable there in root property ?
+    Ans : because when we define our variables here then we can use that anywhere in any locally closed elements in css but if we define our locally inside any element css then it cannot be used thorughout the document*/
+
+        /* but yeah ur usecase depends upon your work so yeah their is not any hardcode type things upon what to use ans what not to 
+    If u want something to be local then use local variables else if you want to want any varibale to be defined global then use global variable */
+        :root {
+            --primary-color: blue;
+            --danger-color: red;
+            --normal-color: green;
+        }
+
+        body {
+            color: white;
+            background-color: black;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .box {
+            width: 200px;
+            height: 300px;
+            border: 2px red solid;
+            border-radius: 25px;
+            margin: 5px;
+        }
+
+        #box1 {
+            background-color: var(--danger-color);
+        }
+
+        #box2 {
+            background-color: var(--primary-color);
+        }
+
+        #box3 {
+            background-color: var(--normal-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+    </div>
+</body>
+
+</html>
