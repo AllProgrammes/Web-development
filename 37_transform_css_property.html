@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform CSS Property</title>
+    <style>
+        /* used to set default values for the whole webpage */
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        .container {
+            height: 80vh;
+            border: 1px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .box {
+            height: 300px;
+            width: 300px;
+            border: 2px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 1s ease-in-out;
+        }
+
+        .box:hover {
+            /* This will rotate the element to whatever degree we enter */
+            transform: rotate(90deg);
+
+            /* This will skew/tilt the element to whatever degree we enter */
+            transform: skew(30deg);
+
+            /* This will scale the element to whatever times we enter */
+            transform: scale(1.2);
+
+            /* This will move the element to whatever direction we enter */
+            transform: translateY(0px);
+            transform: translateX(100px);
+
+            /* transform: translate(Y-axis, X-axis); */
+            transform: translate(0px, 100px);
+            /* this is short hand for using translate property */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            This is me learning Transform Property
+        </div>
+    </div>
+</body>
+
+</html>
