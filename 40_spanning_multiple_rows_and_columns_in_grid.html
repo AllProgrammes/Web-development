@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>This is me learning grid spanning</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      color: white;
+      font-family: monospace;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 2fr 4fr 2fr;
+      grid-template-rows: repeat(4, 50px);
+    }
+
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: purple;
+      border: 1px solid black;
+    }
+
+    .box:first-child {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      /* This means that the first column wil start with line number 1 and end at line number 3 */
+      grid-row-start: 1;
+      grid-row-end: 3;
+      /* This means that the first row will start with line nuber 1 in row section and end at line number 3 on the same side */
+
+      /* but but we have a short hand for these also , as shown below */
+      grid-column: 1/span 2;
+      grid-row: 1/span 3;
+      /* This tells that how much boxes space u want like if we write 1/span 4 then it wil take 4 boxes space */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box">Item-1</div>
+    <div class="box">Item-2</div>
+    <div class="box">Item-3</div>
+    <div class="box">Item-4</div>
+    <div class="box">Item-5</div>
+    <div class="box">Item-6</div>
+    <div class="box">Item-7</div>
+    <div class="box">Item-8</div>
+  </div>
+</body>
+
+</html>
