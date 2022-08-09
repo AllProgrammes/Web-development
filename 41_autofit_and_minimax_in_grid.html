@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>This is me learning Autofit and minimax in grid</title>
+  <style>
+    * {
+      margin: 0px;
+      color: white;
+      font-family: monospace;
+    }
+
+    .container {
+      display: grid;
+      /* grid-template-columns: 1fr 1fr 1fr; */
+
+
+      grid-template-columns: repeat(auto-fit, minmax(10px, 100px));
+      /* This my friend what i have written above is a master stroke :-
+      auto-fit => allows the boxes in the grid to fit itself from screen to screen
+      minmax -> define the min and max width of the grid box */
+    }
+
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background-color: black;
+      border: 1px solid red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box">Item-1</div>
+    <div class="box">Item-2</div>
+    <div class="box">Item-3</div>
+    <div class="box">Item-4</div>
+    <div class="box">Item-5</div>
+    <div class="box">Item-6</div>
+    <div class="box">Item-7</div>
+    <div class="box">Item-8</div>
+    <div class="box">Item-9</div>
+    <div class="box">Item-10</div>
+    <div class="box">Item-11</div>
+    <div class="box">Item-12</div>
+  </div>
+</body>
+
+</html>
