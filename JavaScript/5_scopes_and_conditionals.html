@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scopes and Conditionals</title>
+</head>
+
+<body>
+  <div class="box">
+    <ul class="box-ul">
+      <div class="box-ul-li">Item-1</div>
+      <div class="box-ul-li">Item-2</div>
+      <div class="box-ul-li">Item-3</div>
+      <div class="box-ul-li">Item-4</div>
+      <div class="box-ul-li">Item-5</div>
+      <div class="box-ul-li">Item-6</div>
+      <div class="box-ul-li">Item-7</div>
+      <div class="box-ul-li">Item-8</div>
+      <div class="box-ul-li">Item-9</div>
+      <div class="box-ul-li">Item-10</div>
+    </ul>
+  </div>
+  <script>
+
+    // Local and Global Variable
+    var old_method = "This is the way we have being using till this doc";
+    console.log(old_method);
+
+    let new_method = "From now onwards we will use this method \nReason --> we cant overwrite it";
+    console.log(new_method);
+    {
+      new_method = "This is a test of local variable in action";
+      console.log(new_method);
+    }
+
+    // Conditional Statements
+    let age = 45;
+    if (age > 18) {
+      console.log("Yes, I am boy");
+    }
+    if (20 < age || age < 40) {
+      console.log("I am straight");
+    }
+    else if (age = 45) {
+      console.log("Yes, I am teenage boy");
+    }
+    else {
+      console.log("Yes,I am BCA kid");
+    }
+
+    // Switch Case 
+    const number = 34;//fact : we cant overwrite a constant value
+    switch (number) {
+      case 34:
+        console.log("I am number 34");
+        break;
+      case 24:
+        console.log("I am number 24");
+        break;
+      case 14:
+        console.log("I am number 14");
+        break;
+      default:
+        break;
+    }
+  </script>
+</body>
+
+</html>
