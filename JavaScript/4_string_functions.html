@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String Functions</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Hello hello mike testing 1 2 3</h1>
+    <div class="box">This is me learning String Functions</div>
+  </div>
+  <script>
+    var str = "This is a string";
+    console.log(str);
+
+    // First occurance of the substring
+    var first_position = str.indexOf("is");
+    console.log(`The first time when "is" occured in the string str it was at ` + first_position + " position")
+
+    // Last occurance of the substring
+    var last_position = str.lastIndexOf("is");
+    console.log("\nThe last time when 'is' occurred in the string str was at " + last_position + " position")
+
+    // Substring from a string
+    var slicing_test = str.slice(1, 8);
+    console.log(`Starts from the given index value and ends just before the give index \nResults in this --> ${slicing_test}`)
+
+    slicing_test = str.substring(1, 8);
+    console.log(`Same as slice but slice can take negative value as well hehe anyway just for the proof here what u get after using this function --> ${slicing_test}`)
+
+    var temp = str.substr(1, 8);
+    console.log(`So whats different in this now ?? useles? Nooo !! \nReason : It start from the index which we have given and goes to the length provided so it will end exactly where we want to and not one index before and this according to me is very usefull to me\nResult --> ${temp}`)
+
+    var replaced = str.replace("string", "boy");
+    console.log(str);
+    console.log(replaced);
+    // Q. Do replace function changes the string ??
+    // Ans Nooooooooooooooooooo !!
+
+    console.log(str.toLowerCase()) // converts to lower case
+    console.log(str.toUpperCase()) // converts to upper case
+
+    var example = "  This is a test     example   "
+    console.log(example.trim()) //it removes the extra spaces from both start and ends but no from middle
+
+    console.log(str[0]) //typical way of printing index
+  </script>
+</body>
+
+</html>
