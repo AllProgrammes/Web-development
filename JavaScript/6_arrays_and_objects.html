@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>This is me learning arrays and objects in javascript</title>
+</head>
+
+<body>
+  <div class="test">Something Something</div>
+  <script>
+    //premetive datatype
+    let number = 34;
+    let string = "String";
+    let boolean_type = true;
+    let null_type = null;
+    let undefined_type = undefined;
+
+    console.log(number);
+    console.log(string);
+    console.log(boolean_type);
+    console.log(null_type);
+    console.log(undefined_type);
+
+    let student_info = {
+      name: "Biswajit",
+      class: 12,
+      github: "mishrabiswajit",
+      telegram: "mishrabiswajit"
+    }
+    console.log(student_info)
+
+    // Arrays in javascript
+    let names = [1, "Biswajit", "Shreya", "001", "002", 34.56];
+    console.log(names)//This will print all the elements inside the array
+    console.log(names[2])//this is print that element which is at index 2 i.e shreya in this case
+    console.log(names.length)//this will print the length of the array
+    console.log(names.sort())//this will sort the array and then print it
+    names.push("I am a Boy")//by doing this we can push any new element to our existing array
+    console.log(names)
+
+    // one more way to make array in javascript
+    let new_method = new Array(23, 34);
+    console.log(new_method)
+
+    let one_more_new_method = new Array(23);//This will create a array of 23 undefined elements
+    console.log(one_more_new_method)
+  </script>
+</body>
+
+</html>
