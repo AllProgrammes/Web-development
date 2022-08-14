@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>This is me learning types of loop</title>
+</head>
+
+<body>
+  <script>
+    // Types of loop
+
+    // 1. For loop
+    for (let number = 0; number <= 3; number++) {
+      //This loop will start from 0 and go to 3 so we will get 4 times execution
+      console.log(`I have started myself at 0 and This time I have become ${number}`);
+    }
+
+    // idk what I am showing this but you can print an array using for loop
+    //so lets take a array
+    let name = ["B", "i", "s", "w", "a", "j", "i", "t"];
+    for (let index = 0; index < name.length; index++) {
+      console.log(`${name[index]} is ${index + 1} letter of my name and I am printing this using simple/traditional FOR loop`);
+    }
+
+    // 2. FOR EACH loop
+    // so what i have shown u above can be done with a lot more hassle and less codes using this modern javascript technique
+    name.forEach(element => { //or name.forEach(function f(element){ 
+      console.log("I am printing this using FOR-EACH loop " + element);
+    });
+
+    // 3. FOR OF loop
+    for (element of name) {
+      console.log("I am printing this using FOR-OF loop " + element);
+    }
+
+    // 4. FOR IN loop - can be used to iterate over objects in javascript
+    let student_info = {
+      Name: "Biswajit",
+      Course: "BCA",
+      Fee: 55000
+    }
+    for (key in student_info) {
+      console.log(`${key} is ${student_info[key]}`);
+    }
+
+    // 5.WHILE loop - huff finally
+    let lucky_number = 11;
+    while (lucky_number > 0) {
+      console.log(`I wil keep runnnig untill ${lucky_number} is greater than 0.`);
+      lucky_number--;// u can see this as ->   lucky_number = lucky_number - 1  after each loop count
+    }
+
+    // 6. DO WHILE loop - runs at least once irrespective of the condition 
+    let madboy = 3;
+    do {
+      console.log("I am madboy !! count -> " + madboy);
+      madboy--;
+    } while (madboy > 0);
+  </script>
+
+</body>
+
+</html>
