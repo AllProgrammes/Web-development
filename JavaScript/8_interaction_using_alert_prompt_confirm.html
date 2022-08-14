@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interaction using alert prompt and confirm</title>
+</head>
+
+<body>
+  <script>
+    // Confirm Function 
+    // let test = confirm("This is a very secret wesbite \nDo you still want to procced ?");
+    // console.log(test)
+
+    // Alert message in browser using javascript
+    //          alert("Hi ! This is Biswajit ");                 //shows a popup message which takes no response "OK"
+
+    // This is how we can take input via prompt function
+    // let username = prompt("What's you username ?", "Enter you username here");
+    // let password = prompt("Password : ", "");
+
+    //Lets combine everything and create a bang
+    let confirmation = confirm("⚠️ This is a very secret website \nDo you stil want to procced ?")
+    if (confirmation) {
+      let username = prompt("What's you username ?", "Enter you username here");
+      let password = prompt("Password : ", "");
+      if (username == "cosmos" && password == "area51") {
+        console.log(username); //logs when correct credentials is entered
+        console.log(password); //logs when correct credentials is entered
+        alert("Enjoy !!");
+        //Then he/she will be redirected to this url and for this we have 2 methods which are shown below :-
+
+        //1. user can't go back -> // Simulate an HTTP redirect:
+        window.location.replace("https://mishrabiswajit.github.io/");
+        //2.user can go back ->  // Simulate a mouse click:
+        // window.location.href = "https://mishrabiswajit.github.io/";
+      }
+      else {
+        alert("Sorry You can't access this webpage\nPlease comeback with correct username and password !!");
+        window.location.href = "https://t.me/mishrabiswajit";
+      }
+    }
+    else {
+      window.stop();
+    }
+  </script>
+</body>
+
+</html>
