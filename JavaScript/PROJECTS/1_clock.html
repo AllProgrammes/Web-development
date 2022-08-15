@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLOCK</title>
+  <style>
+    * {
+      background-color: black;
+      color: white;
+      font-family: monospace;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    html {
+      font-size: 10px;
+    }
+
+    #container {
+      /* border: 1px solid red; */
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #container-clock {
+      font-size: 2rem;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <h1 id="container-h1">Wait till it loads</h1>
+    <div id="container-clock"></div>
+  </div>
+  <script>
+
+    // THIS IS A TIMER WHICH WILL BE SHOWN BEFORE THE CLOCK IS SHOWN
+    let sec = 5;
+    let timer = setInterval(function () {
+      document.getElementById("container-h1").innerHTML = "00:0" + sec; sec--;
+      if (sec < 0) {
+        clearInterval(timer);
+        document.getElementById("container-h1").style.display = "none";
+        document.getElementById("container-clock").style.display = "block";
+      }
+    }, 1000);
+
+    // THIS IS THE CLOCK 
+    function clock() {
+      let current = new Date();
+      document.getElementById("container-clock").innerHTML = current.toLocaleTimeString({ timeZone: 'Asia/Kolkata' });
+    }
+    setInterval(clock, 1000);
+  </script>
+</body>
+
+</html>
