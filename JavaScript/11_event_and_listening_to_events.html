@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>This is me learning how to log an event</title>
+
+  <!-- You know I know its simple CSS -->
+  <style>
+    * {
+      background-color: black;
+      color: white;
+      font-family: monospace;
+    }
+
+    #button {
+      margin: 20px;
+      padding: 2px 15px;
+      background-color: grey;
+      border: 2px solid white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- This is typical me creating some elements to test upon -->
+  <div id="container">
+    <!-- why ID and not class ?? Because this shit don't work with classes as far as I know till now -->
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse vitae beatae cumque, veniam sint expedita ea magni
+    perferendis? Illum, ut dolorem? Dolorum, cumque obcaecati? Cupiditate ullam ut perferendis, quas corporis atque
+    culpa ex commodi!
+  </div>
+  <button id="button" onclick="toggleHide()">Click Here</button>
+  <!-- onclick is a event which will assign a fucntion to occur when it gets triggered -->
+
+
+  <script>
+    // This is how to you can use event listener for the same work given below
+    let container = document.getElementById("container");
+    container.addEventListener("mouseover", function test_gay() {
+      console.log("You are gay !!");
+      //So when u hover ur mouse over the element which has ID "container" then it will get triggered 
+    }
+    )
+    container.addEventListener("mouseout", function test_not_gay() {
+      console.log("You are not gay !!");
+      //So when u hover ur mouse over the element and leave that action then the element which has ID "container" then it will get triggered 
+    })
+
+    // This is how you make a event occur using on listener 
+    function toggleHide() {
+      let container = document.getElementById("container"); //but if somehow if you forget to use liek this then also it will work cuz modern browsers get the ID of the elements to track them if not present 
+      let button = document.getElementById("button");//but again it's a good practice to use seperate elements
+      if (container.style.display == "block") {
+        container.style.display = "none";
+      }
+      else {
+        container.style.display = "block";
+      }
+    }
+  </script>
+</body>
+
+</html>
