@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>This is me learning how to navigate throughout DOM using js</title>
+  <!-- btw if you are still wondering what is the full form of DOM here then it is Document Object Model -->
+</head>
+
+<body>
+  <div class="navbar" id="navbar">
+    <ul class="navbar-ul">
+      <li class="navbar-ul-li">Home</li>
+      <li class="navbar-ul-li">contact us</li>
+      <li class="navbar-ul-li">trending today</li>
+      <li class="navbar-ul-li">something</li>
+      <li class="navbar-ul-li">anything</li>
+    </ul>
+  </div>
+  <div class="navbar"></div>
+  <script>
+    // Method we can target our DOM
+
+    // 1. using their IDs 
+    let navbar_id = document.getElementById("navbar");
+    console.log(navbar_id);
+
+    // 2. using their Class 
+    let navbar_class = document.getElementsByClassName("navbar");
+    console.log(navbar_class);
+
+    // but but but what if we have same class used multiple times ? 
+    // like that in line number 22
+    // so at that time it will show all the places where same class is used and we can trget anyone one of them like this 
+    console.log(navbar_class[0])
+    console.log(navbar_class[1])
+    //Yes like this !! its an array hehe
+
+    // 3. using css query selector
+    let query_selector = document.querySelector(".navbar"); //this will return the first class/id which have this class/id tag
+    console.log(query_selector);
+
+    // But what if we want to select a LI from UL 
+    let query_selector_ul_li = document.querySelectorAll(".navbar>ul>li");
+    for (let index = 0; index < query_selector_ul_li.length; index++) {
+      console.log(query_selector_ul_li[index]);
+    }
+
+    // This is how we can change or play with DOM values
+    query_selector_ul_li[0].innerHTML = "This website is hacked hehe now give money";
+  </script>
+</body>
+
+</html>
