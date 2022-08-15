@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>This is me learning how to perform a event after a set time interval</title>
+</head>
+
+<body>
+  <div class="box">This is me becoming obsolete day by day</div>
+  <script>
+    function greet() { // creating a function for greeting 
+      let name = prompt("Please enter your name : ", ""); //declaring a variable which takes input
+      alert(name + " You are gay !!\nNo Joke You are :)");
+    }
+    //setTimeout(greet, 2000); // setting timer which is 2000ms
+    let Timeout = setTimeout(greet, 5000);//this will give a unique ID that we can use to clear as shown as line number 21 below
+    console.log(Timeout);//prints that unique ID in the console
+    clearTimeout(Timeout);//clears the event before whenever triggered --> which in this case is instant
+
+    // so now that we will see how to trigger that event repeatedly 
+    setInterval(greet, 10000);
+    // same we can get an ID from it and we can delete it  like we did in the case of setTimeout
+    //let interval= setInterval(greet, 10000);
+    //clearInterval(interval);
+  </script>
+</body>
+
+</html>
