@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>This is me learning how to date and time in javascript</title>
+  <style>
+    * {
+      background-color: black;
+      font-family: monospace;
+      font-size: larger;
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100vh;
+      width: 100vw;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div id="time"></div><br>
+    <div id="birthday"></div>
+    <div id="run_time"></div>
+  </div>
+  <script>
+
+    // Quick Tip !
+
+    // Tip 1 
+    // .innerHTML -> takes HTML tags as an string along with normal string 
+    // .innerText -> Takes only text as input and not HTML tags   
+
+    // Tip 2
+    // Months in javascript ranges from 0 to 11
+    // Reason -> https://bit.ly/3PuECzH
+
+    const program_start_time = Date.now();
+
+    function wish() {
+      let current = new Date();
+      let month = current.getMonth();
+      let date = current.getDate();
+      let day = current.getDay();
+      let hour = current.getHours();
+      let minutes = current.getMinutes();
+      let seconds = current.getSeconds();
+
+      // If you want to fix the date or set it to some specific date then u can use the setdate fx to do that as shown below
+      current.setDate(23);
+      console.log(current);
+
+      //DIGITAL CLOCK
+      document.getElementById("time").innerText = `Month = ${month + 1} \nDate = ${date}\n Day = ${day}\n Hour = ${hour}\n Minute = ${minutes}\n Seconds = ${seconds}`;
+
+
+      if (date == 16 && month == 7) {
+        document.getElementById("birthday").innerText = `🎂Happy Birthday🎂`;
+        const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+        document.getElementById("birthday").style.color = "#" + randomColor;
+      }
+    }
+    setInterval(wish, 1000);
+
+    //This is a demo function to show how you can use Date.now fx to check the runtime of your program
+    setTimeout(function () {
+      var program_end_time = Date.now();
+      document.getElementById("run_time").innerText = "\nThis program took " + (program_end_time - program_start_time) + " miliseconds to load";
+    }, 5000);
+  </script>
+</body>
+
+</html>
