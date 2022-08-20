@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>This is me exploring maths object</title>
+</head>
+
+<body>
+  <h2>This is me exploring maths object</h2>
+  <script>
+    // This will show all the available functions in Math object
+    let m = Math;
+    console.log(m.r);
+
+    // Round Function
+    let a = 69.69;
+    let b = 34;
+    console.log(`After rounding off the integers a and b,\nThe value of a is ${Math.round(a)} and the value of b is ${Math.round(b)}`);
+
+    // Pow Function
+    console.log("5 raised to the power of 2 is ", Math.pow(5, 2));
+
+    // Square Root Function
+    console.log("Square root of 25 is ", Math.sqrt(25));
+
+    // Ceil and Floor Value 
+    let number = 35.6;
+    console.log("When we round of the number " + number + "\nThe ceil(upper round off) value is " + Math.ceil(number) + " and\nThe floor (lower round off) value is " + Math.floor(number));
+
+    // Abs Function
+    // btw abs means absolute value which means no only positive integers
+    console.log("The abs value of 45.44 is ", Math.abs(45.44));
+    console.log("The abs value of -45.44 is ", Math.abs(-45.44));
+
+    // Min and Max Function
+    let numbers = [23, 34, 45, 66, 67, 81, 2, 5];
+    console.log("min of the of above array is -> " + Math.min(...numbers));
+    console.log("max of the of above array is -> " + Math.max(...numbers));
+    //This is a very short yet effective way to print the max or min number in an array
+
+    // Random Number
+    console.log("This is a random number generated between 0 to 100 -> ", Math.round(Math.random() * 100));
+    console.log("This is a random number generated between 1 to 10 -> ", Math.ceil(Math.random() * 10));
+    console.log("This is a random number generated between 0 to 9 -> ", Math.floor(Math.random() * 10));
+
+    // and if you want any specific range then 
+    let start = 5;
+    let end = 60;
+    let range = start + (end - start) * Math.random();
+    console.log("This is a random number which is generated from 5 to 60 -> ", Math.round(range));
+  </script>
+</body>
+
+</html>
