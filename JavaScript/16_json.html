@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>This is me learning about how to work with json</title>
+</head>
+
+<body>
+  <h5>What is a json ?</h5>
+  <p>A json is a file containing objects and which can be passed to different programmes which can use them. It is used
+    to stringify an object and parse it </p>
+  <script>
+    let mydetails = {
+      name: "biswajit",
+      course: "bca",
+      age: 18,
+      alive: true
+    }
+    console.log(mydetails); //no surprises - we will get the full object 
+
+    let stringigy_myjson = JSON.stringify(mydetails);
+    console.log(stringigy_myjson); // prints the above object as a string
+
+    stringigy_myjson = stringigy_myjson.replace(true, false)//makes my alive status false in the string
+
+    let parse_myjson = JSON.parse(stringigy_myjson);
+    console.log(parse_myjson); // converts the stringyfied json string to object back
+  </script>
+</body>
+
+</html>
