@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess The Number Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+</head>
+<style>
+  * {
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    text-decoration: none;
+  }
+
+  .intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .intro-button {
+    margin-top: 20px;
+    padding: 10px 32px;
+    border: 2px solid white;
+    border-radius: 17px;
+    color: yellow;
+    font-weight: 900;
+    font-size: large;
+    background-color: red;
+    font-family: 'Uncial Antiqua', cursive;
+    transition: all 1s ease;
+  }
+
+  .intro-button:hover {
+    cursor: pointer;
+  }
+</style>
+
+<body>
+  <div class="intro">
+    <a class="intro-button" id="intro-button" href="./game.html">Start</a>
+  </div>
+  <script>
+    setInterval(() => {
+      document.getElementById("intro-button").style.transform = "skew(30deg)";
+    }, 1000);
+    setInterval(() => {
+      document.getElementById("intro-button").style.transform = "skew(-30deg)";
+    }, 1500);
+  </script>
+</body>
+
+</html>
